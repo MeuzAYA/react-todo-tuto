@@ -3,6 +3,7 @@ import type { Tache } from './types';
 import { TacheItem } from './TacheItem';
 
 function App() {
+  // Les tâches restent en mémoire et ne sont pas persistées entre les rechargements.
   const [taches, setTaches] = useState<Tache[]>([
     { id: 1, libelle: 'Apprendre Git', fait: false },
     { id: 2, libelle: 'Apprendre React', fait: false },
@@ -10,12 +11,14 @@ function App() {
   const [nouvelleTache, setNouvelleTache] = useState('');
 
   function ajouterTache() {
+    // Ignore les espaces seuls et conserve le libellé saisi par l'utilisateur.
     if (!nouvelleTache.trim()) return;
     setTaches([...taches, { id: Date.now(), libelle: nouvelleTache, fait: false }]);
     setNouvelleTache('');
   }
 
   function toggleTache(id: number) {
+    // Ne modifie que la tâche ciblée et conserve toutes les autres propriétés.
     setTaches(taches.map(t => t.id === id ? { ...t, fait: !t.fait } : t));
   }
 

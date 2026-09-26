@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.tsx'
 
+// Monte l'application dans la racine HTML, avec les vérifications de développement de React.
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <App />

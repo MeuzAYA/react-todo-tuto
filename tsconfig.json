@@ -1,4 +1,5 @@
 {
+  // Ce fichier orchestre les configurations séparées de l'application et des outils Node.
   "files": [],
   "references": [
     { "path": "./tsconfig.app.json" },

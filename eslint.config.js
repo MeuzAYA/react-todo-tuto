@@ -5,6 +5,7 @@ import reactRefresh from 'eslint-plugin-react-refresh'
 import tseslint from 'typescript-eslint'
 import { defineConfig, globalIgnores } from 'eslint/config'
 
+// Applique les règles recommandées à TypeScript/TSX et ignore les fichiers générés dans dist.
 export default defineConfig([
   globalIgnores(['dist']),
   {

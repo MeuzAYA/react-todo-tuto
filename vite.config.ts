@@ -1,7 +1,7 @@
 import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 
-// https://vite.dev/config/
+// Configuration Vite minimale : le plugin React prend en charge le JSX et le rafraîchissement à chaud.
 export default defineConfig({
   plugins: [react()],
 })
